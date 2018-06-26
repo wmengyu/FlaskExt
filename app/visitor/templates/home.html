@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #top{
+            background: pink;
+            height: 30px;
+        }
+        .p_left{
+            float: left;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+        .p_right{
+            float: left;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="top" class="clear">
+    {% if name %}
+        <span>{{ name }}</span>
+        <a href="{{ url_for('visitor.logout')}}">退出</a>
+    {% else %}
+        <a class="p_left" href="{{ url_for('visitor.login1')}}">请登录</a>
+        <a class="p_right" href="{{ url_for('visitor.register1')}}">免费注册</a>
+    {% endif %}
+</div>
+
+</body>
+</html>

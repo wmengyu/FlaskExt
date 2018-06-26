@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register1</title>
+</head>
+<body>
+<form action="{{ url_for('visitor.register1') }}" method='POST'>
+    用户名:<input type="text" name="name"><br>
+    密码:<input type="text" name="password"><br>
+    请确认密码:<input type="text" name="password1"><br>
+    <input type="submit" value="注册"><p style="color: red">{{ msg }}</p>
+</form>
+</body>
+</html>
